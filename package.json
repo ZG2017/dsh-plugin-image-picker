@@ -1,0 +1,33 @@
+{
+  "name": "@zg2017/dsh-plugin-image-picker",
+  "description": "Adds a file-picker 'attach image' button to the composer toolbar, since DSH's own web client only supports paste and drag-and-drop for image attachments (v1 scope, per its own upstream design notes) - a real gap for touch devices with no drag-and-drop and, on iOS, no clipboard-image paste.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "ZG2017",
+  "homepage": "https://github.com/ZG2017/dsh-plugin-image-picker#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZG2017/dsh-plugin-image-picker.git"
+  },
+  "keywords": ["deepseek-harness", "dsh", "dsh-plugin", "composer", "image-attachment"],
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
+}
