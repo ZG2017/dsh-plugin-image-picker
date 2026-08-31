@@ -1,4 +1,4 @@
-// Client half of @zg2017/dsh-plugin-image-picker. Hand-written, no build
+// Client half of @gz2016/dsh-plugin-image-picker. Hand-written, no build
 // step - a hand-written client.js keeps the build graph simple for a small DOM patch.
 //
 // PROTOTYPE, not yet the final implementation - see the plan discussion
@@ -42,7 +42,7 @@
 // of properly reimplementing the attachment rail against
 // `conversation.input.attachments` instead.
 window.__ModuleLoader__.load({
-  id: '@zg2017/dsh-plugin-image-picker',
+  id: '@gz2016/dsh-plugin-image-picker',
   factory: function (require) {
     var module = { exports: {} }
     var exports = module.exports

@@ -15,7 +15,7 @@ A pure client-side patch (`src/client.js`, no build step): registers a composer 
 ## Install
 
 ```sh
-dsh plugin --profile web add @zg2017/dsh-plugin-image-picker
+dsh plugin --profile web add @gz2016/dsh-plugin-image-picker
 ```
 
 No configuration needed.

@@ -1,5 +1,5 @@
 {
-  "name": "@zg2017/dsh-plugin-image-picker",
+  "name": "@gz2016/dsh-plugin-image-picker",
   "description": "Adds a file-picker 'attach image' button to the composer toolbar, since DSH's own web client only supports paste and drag-and-drop for image attachments (v1 scope, per its own upstream design notes) - a real gap for touch devices with no drag-and-drop and, on iOS, no clipboard-image paste.",
   "version": "0.1.0",
   "license": "MIT",
