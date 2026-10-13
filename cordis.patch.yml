@@ -1,0 +1,4 @@
+# Bundle layer DSH applies when this package is a selected bundle.
+- insert:
+    - id: image-picker
+      name: '@gz2016/dsh-plugin-image-picker'

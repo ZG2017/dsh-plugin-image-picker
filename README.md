@@ -14,11 +14,30 @@ A pure client-side patch (`src/client.js`, no build step): registers a composer 
 
 ## Install
 
+Requires DeepSeek Harness **0.2.1-alpha.2 or newer** (see [DSH 0.2 update](#dsh-02-update)).
+
+**From the app:** Plugins → install `@gz2016/dsh-plugin-image-picker`. Installing from the Plugins page also turns the bundle on.
+
+**From the CLI:**
+
 ```sh
 dsh plugin --profile web add @gz2016/dsh-plugin-image-picker
 ```
 
+`dsh plugin add` only runs `pnpm add`. Also add `"@gz2016/dsh-plugin-image-picker"` to `dsh.profile.bundles` in `~/.dsh/profiles/web/package.json`, then restart. DSH 0.2 loads a profile package only when it is selected as a bundle; it then applies this package's `cordis.patch.yml`.
+
 No configuration needed.
+
+
+## DSH 0.2 update
+
+DeepSeek Harness 0.2 (0.2.1-alpha.2) changed several plugin APIs this package used, so the 0.1 release does not load on it: DSH disables it at startup because its peer versions are pinned to 0.1.1-rc.2. This release targets 0.2.1-alpha.2.
+
+What changed:
+
+- Client `inject` list: the removed `@deepseek-ai/dsh-client-runtime` is replaced by the packages that now provide each service (`slots` → `dsh-client-ui-renderer`).
+- `peerDependencies` now name the 0.2.1-alpha.2 packages.
+- Ships a `cordis.patch.yml` bundle layer (`dsh.bundle.patch`). DSH 0.2 only loads profile packages that are selected bundles, so install instructions changed (see [Install](#install)).
 
 ---
 *Unofficial project, independently developed and maintained by a community member. Not affiliated with or endorsed by DeepSeek.*
